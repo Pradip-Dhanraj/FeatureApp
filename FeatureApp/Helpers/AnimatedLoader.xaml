@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage x:Class="FeatureApp.Helpers.AnimatedLoader"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ActivityIndicator
+    Color="White"
+    IsRunning="True"
+    IsEnabled="True"
+    VerticalOptions="Center"
+    HorizontalOptions="Center"
+    HeightRequest="70"
+    WidthRequest="70"/>
+</pages:PopupPage>

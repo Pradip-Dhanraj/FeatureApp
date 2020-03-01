@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application x:Class="FeatureApp.App"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Application.Resources>
+        <!--  Primary App Color  -->
+        <Color x:Key="PrimaryColor">Red</Color> 
+        <!--  Secondary App Color  -->
+        <Color x:Key="SecondaryColor">Yellow</Color>
+        <!--AppTextColor-->
+        <Color x:Key="AppTextColor">Black</Color>
+        <x:String x:Key="LiveBackGroundImage">https://media.giphy.com/media/1gVUhlXhETaRRxzeHO/giphy.gif</x:String>
+        <x:String x:Key="LiveBackGroundImageOffline">resource://FeatureApp.Resources.livebackgrounf.gif</x:String>
+    </Application.Resources>
+</Application>

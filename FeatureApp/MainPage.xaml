@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control:LiveBackgroundPage x:Class="FeatureApp.MainPage"
+                            xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            xmlns:control="clr-namespace:FeatureApp.Controls"
+                            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            LiveBackgroundSource="{StaticResource LiveBackGroundImage}"
+                            xmlns:viewmodel="clr-namespace:FeatureApp.Viewmodels"
+                            mc:Ignorable="d">
+    <control:LiveBackgroundPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="PlaceholderColor" Value="Gray" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="BorderWidth" Value="1" />
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </control:LiveBackgroundPage.Resources>
+    <control:LiveBackgroundPage.BindingContext>
+        <viewmodel:LoginViewmodel x:Name="viewmodel"/>
+    </control:LiveBackgroundPage.BindingContext>
+    <control:LiveBackgroundPage.CustomContentpage>
+        <StackLayout BackgroundColor="Transparent"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            <StackLayout Margin="20,0"
+                         VerticalOptions="CenterAndExpand">
+                <Frame>
+                    <Entry Placeholder="Username"
+                           HorizontalOptions="Fill" />
+                </Frame>
+                <Frame>
+                    <Entry Placeholder="Password"
+                           HorizontalOptions="Fill" />
+                </Frame>
+                <Button Text="Login"
+                        TextColor="{StaticResource AppTextColor}"
+                        Command="{Binding LoginCommand}"
+                        HorizontalOptions="Center">
+                    <Button.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS"
+                                Value="20, 0" />
+                        </OnPlatform>
+                    </Button.Padding>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </control:LiveBackgroundPage.CustomContentpage>
+</control:LiveBackgroundPage>
